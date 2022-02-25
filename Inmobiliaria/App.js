@@ -1,13 +1,8 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
 
-import React from 'react';
-import type {Node} from 'react';
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { Navigation } from './src/navigation/Navigation';
+
 import {
   SafeAreaView,
   ScrollView,
@@ -17,50 +12,29 @@ import {
   useColorScheme,
   View,
   Image,
+  SectionList,
 } from 'react-native';
 
 import {
   Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import { ImageHouse } from './src/components/ImageHouse';
-import { HouseProperties } from './src/components/HouseProperties';
+import { CardHouse } from './src/components/Card';
+import { ListHouses } from './src/components/ListHouses';
 
 
-
-const App: () => Node = () => {
+function App() {
   const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
-  return (
+  return(
     <SafeAreaView >
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ScrollView>
-        <View style={styles.sectionContainer} >
-          <ImageHouse></ImageHouse>
-          <HouseProperties></HouseProperties>
-        </View>
-      </ScrollView>
+ 
+          <ListHouses />
+
     </SafeAreaView>
-  );
-};
+  )
+}
 
 const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-    flexDirection: 'row',
-    backgroundColor: '#EBF5FB',
-    borderRadius: 10,
-    justifyContent: 'center',
-    margin: 10,
-  },
   
 });
 

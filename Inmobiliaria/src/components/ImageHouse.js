@@ -2,14 +2,13 @@ import { Text, ImageBackground, View, StyleSheet } from "react-native";
 import React from "react";
 import Icon from 'react-native-vector-icons/Ionicons';
 
-export const ImageHouse = () => {
-    const imgH = require('../img/house_5.png')
+export const ImageHouse = ({img, rating}) => {
     return(
         <View style={styles.imageHouse}>
-            <ImageBackground source={imgH} style={styles.houseBackground} imageStyle={styles.imageBackground} >
+            <ImageBackground source={img} style={styles.houseBackground} imageStyle={styles.imageBackground} >
                 <View style={styles.scoreContainer}>
                    <Icon name="star" color='#D68910' size={20} />
-                   <Text style={styles.numScore}>4.2</Text>
+                   <Text style={styles.numScore}>{rating}</Text>
                 </View>
 
             </ImageBackground>

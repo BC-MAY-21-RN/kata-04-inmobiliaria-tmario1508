@@ -6,28 +6,28 @@ const imgBano = require('../img/banos.png');
 const imgPlano = require('../img/plano.png');
 const imgCama = require('../img/cama.png');
 
-export const HouseProperties = () => {
+export const HouseProperties = ({name, direction, bathrooms, beds, size, price}) => {
 
     return(
         <View style={styles.houseProperties} >
             <View style={styles.titleHouse} >
-                <Text style={styles.titleText} >The Willows</Text>
+                <Text style={styles.titleText} >{ name }</Text>
             </View>
             <View style={styles.houseDirection} >
                 <Icon name="location-outline" size={25} color="#000" />
-                <Text style={styles.textDirection} >3517 W. Gray St. Utica</Text>
+                <Text style={styles.textDirection} >{ direction }</Text>
             </View>
             <View style={styles.houseInfo}>
                 <Image source={imgCama} style={styles.imageIcon}></Image>
-                <Text style={styles.textC}>3</Text>
+                <Text style={styles.textC}>{ beds }</Text>
                 <Image source={imgBano} style={styles.imageIcon}></Image>
-                <Text style={styles.textC}>2</Text>
+                <Text style={styles.textC}>{ bathrooms }</Text>
                 <Image source={imgPlano} style={styles.imageIcon}></Image>
-                <Text style={styles.textCFt}>230 ft</Text>
+                <Text style={styles.textCFt}>{ size } ft</Text>
                 <Text style={styles.ftC}>2</Text>
             </View>
             <View style={styles.housePrice} >
-                <Text style={styles.textPrice}>$440/m</Text>
+                <Text style={styles.textPrice}>$ { price }/mx</Text>
                 <Icon name="heart-circle" color="green" size={30} style={styles.iconFav} />
             </View>
           </View>
