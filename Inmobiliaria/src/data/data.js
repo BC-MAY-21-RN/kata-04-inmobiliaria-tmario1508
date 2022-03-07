@@ -54,4 +54,15 @@ export const houses = [
         rating: 4.5,
         img: require('../img/house_5.png'),
     },
+    {
+        id: 6,
+        name: "The Circle",
+        direction: "6 Av. 56 St. CA",
+        bathrooms: "1",
+        beds: "1",
+        size: "150",
+        price: "210.00",
+        rating: 4.7,
+        img: require('../img/house_1.png'),
+    },
 ] 

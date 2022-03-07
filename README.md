@@ -68,4 +68,6 @@ En la carpeta [img](/img) se encuentra el diseño solicitado en formato PNG y [F
 
 ## Recursos
 [Para apoyo de tus actividades utiliza esta lista de recursos recomendados](https://brightcoder.gitbook.io/handbook/react-native)
-  
+
+## Resultado final
+![inmobiliaria-card](img/inmo.PNG)

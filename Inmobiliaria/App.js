@@ -1,5 +1,6 @@
 
 import * as React from 'react';
+import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { Navigation } from './src/navigation/Navigation';
 
@@ -25,16 +26,18 @@ import { ListHouses } from './src/components/ListHouses';
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
   return(
-    <SafeAreaView >
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
- 
-          <ListHouses />
-
-    </SafeAreaView>
+    <NavigationContainer>
+        <Navigation />
+    </NavigationContainer>
+    
   )
 }
 
 const styles = StyleSheet.create({
+  marginList: {
+    marginEnd: 100,
+  },
+  
   
 });
 

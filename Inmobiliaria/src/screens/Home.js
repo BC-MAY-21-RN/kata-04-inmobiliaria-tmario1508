@@ -1,6 +1,6 @@
 import React from "react";
 import { View } from "react-native";
-import { CardHouse } from "../components/Card";
+import { ListHouses } from "../components/ListHouses";
 
 
 import { houses } from '../data/data'
@@ -8,7 +8,7 @@ import { houses } from '../data/data'
 export const Home = ({navigation}) => {
     return(
         <View>
-            <CardHouse navigation={navigation}></CardHouse>
+            <ListHouses />
         </View>
     )
 }
